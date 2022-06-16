@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('../partials/head') %> 
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/users/register.css">
+    
+</head>
+<body>
+    <!-- Header -->
+
+    <%- include('../partials/header') %> 
+
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="/home">Home</a> / <a href="/register">Register</a></h3>
+        </article>
+    </section>
+    <main class="body">
+        <form action="register" method="post" class="formulario-register" enctype="multipart/form-data">
+            <div class="input-label-form">
+                <label for="firstName" class="label-register">Nombre</label>
+                <input 
+                type="text" 
+                name="firstName" 
+                placeholder="Argentina" 
+                class="input-register <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+                value="<%=locals.oldData && oldData.firstName ? oldData.firstName : null%>"
+                minlength="2"
+                maxlength="100"
+                required
+                >
+                <% if (locals.errors && errors.firstName) { %>
+                    <div class="errors">
+                        <p><%= errors.firstName.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="input-label-form">
+                <label for="lastName" class="label-register">Apellido</label>
+                <input 
+                type="text" 
+                name="lastName" 
+                placeholder="Campers" 
+                class="input-register <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+                value="<%=locals.oldData && oldData.lastName ? oldData.lastName : null%>"
+                minlength="2"
+                maxlength="100"
+                required
+                >
+                <% if (locals.errors && errors.lastName) { %>
+                    <div class="errors">
+                        <p><%= errors.lastName.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="input-label-form">
+                <label for="userName" class="label-register">Nombre de usuario</label>
+                <input 
+                type="text" 
+                name="userName" 
+                placeholder="Nombre de usuario" 
+                class="input-register <%= locals.errors && errors.userName ? 'is-invalid' : null %>"
+                value="<%=locals.oldData && oldData.userName ? oldData.userName : null%>"
+                minlength="4"
+                maxlength="15"
+                required
+                >
+                <% if (locals.errors && errors.userName) { %>
+                    <div class="errors">
+                        <p><%= errors.userName.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="input-label-form">
+                <label for="email" class="label-register">Correo electrónico</label>
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="argentinacampers@gmail.com" 
+                class="input-register <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                value="<%=locals.oldData && oldData.email ? oldData.email : null%>"
+                maxlength="100"
+                required
+                >
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errors">
+                        <p><%= errors.email.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="input-label-form">
+                <label for="password" class="label-register">Contraseña</label>
+                <input 
+                type="password" 
+                name="password" 
+                placeholder="Contraseña" 
+                class="input-register <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                minlength="6"
+                maxlength="200"
+                required
+                >
+                <% if (locals.errors && errors.password) { %>
+                    <div class="errors">
+                        <p><%= errors.password.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="input-label-form">
+                <label for="password2" class="label-register">Confirmar Contraseña</label>
+                <input 
+                type="password" 
+                name="password2" 
+                placeholder="Confirme su contraseña" 
+                class="input-register <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                minlength="6"
+                maxlength="200"
+                required
+                >
+            </div>
+            <div class="input-label-form">
+                <label for="avatar" class="label-register elegir-avatar-label">Elija su imagen de perfil (Opcional)</label>
+                <input type="file" name="avatar" placeholder="Inserte su imágen" accept=".png, .jpg, .jpeg" id="avatar" class="input-register elegir-avatar-input">
+            </div>
+            <div class="input-label-form">
+                <label for="phoneNumber" class="label-register numero-de-telefono-label">Número de teléfono (Agregar código de área)</label>
+                <input 
+                type="tel" 
+                name="phoneNumber" 
+                placeholder="11-5418-7697" 
+                class="input-register numero-de-telefono-input"
+                maxlength="11"
+                >
+            </div>
+            <div class="input-label-form link-para-iniciar-sesion">
+                <a href="login">Ya tienes una cuenta? Inicia sesion aqui</a>
+            </div>
+            <div class="input-label-form button-registrarse">
+                <button>Registrarse</button>
+            </div>
+        </form>
+    </main>
+  
+    <!-- Footer -->
+    
+    <%- include('../partials/footer') %> 
+</body>
+</html>

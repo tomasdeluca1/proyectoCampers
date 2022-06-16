@@ -1,0 +1,480 @@
+
+body{
+    background-color: #FFEED2;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFEED2;
+}
+.nav-vehiculos{
+    background-color: #957f65;
+    color: #FFEED2;
+    padding: 10px;
+    padding-left: 7%;
+    font-size: 80%;
+}
+
+.nav-vehiculos a {
+    text-decoration: none;
+    color: lightblue;
+    font-weight: lighter;
+}
+
+.nav-vehiculos a:hover {
+    text-decoration: none;
+    color: lightskyblue;
+    box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-carrito{
+    text-align: center;
+    padding-top: 60px;
+}
+
+.text-carrito h1{
+    color: #bea088;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 350ms;
+}
+
+.text-carrito h1:hover{
+    cursor: pointer;
+    color: #926f34;
+}
+
+.carrito{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.container-vans{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFEED2;
+    box-shadow: 0px 1px 5px 3px rgba(149, 127, 101, 0.9);
+    width: 60%;
+    margin: 60px 0 60px 60px;
+    border-radius: 1rem;
+}
+
+.van{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+.flexCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputCarrito{
+   width: 100%;
+   margin-top: 5px;
+   padding: 2px;
+   text-align: center;
+   border-radius: 1rem;
+   background-color: #FFEED2;
+   color: black;
+   box-shadow: 0px 1px 5px 3px rgba(149, 127, 101, 0.2);
+   border: 2px solid #957f65;
+}
+
+
+.imagenes{
+    margin: 0 20px;
+    padding: 5px;
+    transition: all 300ms;
+}
+
+.imagenes:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+.imagen{
+    width: 135px;
+    height: 75px;
+}
+
+.detalles{
+    position: relative;
+    right: 250px;
+}
+
+.precios{
+    font-weight: bold;
+    margin: 0 60px;
+}
+
+.precio{
+    font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+}
+
+
+.resumen-de-la-compra{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFEED2;
+    box-shadow: 0px 1px 5px 3px rgba(149, 127, 101, 0.9);
+    width: 30%;
+    margin: 60px 0 60px 60px;
+    border-radius: 1rem;
+}
+
+
+.total{
+    margin: 20px;
+}
+
+.total p {
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.precio-del-resumen p{
+    color: #926f34;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    margin-top: 50px;
+}
+
+.buttons-resumen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.boton-seguir-comprando{
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+}
+
+
+.boton-seguir-comprando button{
+    border: 1px solid #FFEED2;
+    border-radius: 20px;
+    background-color: #FFEED2;
+    width: 80%;
+    height: 100%;
+    transition: all 350ms;
+}
+
+.boton-seguir-comprando button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.boton-resumen{
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+}
+
+
+.boton-resumen button{
+    border: 2px solid #957f65;
+    border-radius: 1.5rem;
+    background-color: #FFEED2;
+    width: 80%;
+    height: 100%;
+    transition: all 350ms;
+}
+
+.boton-resumen button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+
+
+
+
+@media (min-width: 0px) and (max-width: 480px){
+
+    .carrito{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+   .container-vans{
+        width: 80%;
+        margin: 30px 0;
+    }
+
+   .van{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+   .detalles{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        margin: 10px 0;
+    }
+
+    .resumen-de-la-compra{
+        width: 80%;
+        margin: 30px 0;
+    }
+
+
+
+    .imagenes{
+        margin-bottom: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .flexCart{
+        margin-bottom: 15px;
+        text-align: center;
+        width: 95%;
+    }
+
+    .flexCart label{
+        width: 100%;
+    }
+
+    .flexCart select{
+        width: 100%;
+    }
+
+    
+
+
+
+
+
+
+    .total{
+        margin: 30px 10px;
+    }
+
+    .total p{
+        font-size: 35px;
+        margin: 0;
+    }
+
+    .precio-del-resumen{
+        margin: 30px 10px;
+    }
+
+    .precio-del-resumen p{
+        font-size: 25px;
+        margin: 0;
+    }
+    
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .carrito{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+   .container-vans{
+        width: 80%;
+        margin: 30px 0;
+    }
+
+   .van{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+   .detalles{
+        display: flex;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        justify-content: flex-start;
+        font-size:16px;
+        margin: 10px 0;
+    }
+
+    .resumen-de-la-compra{
+        width: 80%;
+        margin: 30px 0;
+    }
+    .flexCart{
+        margin-bottom: 15px;
+    }
+
+    .imagenes{
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+@media (min-width:769px) and (max-width:1279px){
+    .carrito{
+        margin: 30px 0;
+        justify-content: space-between;
+       
+    }
+
+    .container-vans{
+        width: 60%;
+        margin: 0;
+    }
+
+    .resumen-de-la-compra{
+        width: 30%;
+        margin: 0;
+    }
+
+    .van{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detalles{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        margin: 10px 0;
+    }
+
+    .container-vans{
+        margin-left: 20px;
+    }
+
+    .resumen-de-la-compra{
+        margin-right: 20px;
+    }
+
+    .imagenes{
+        margin-bottom: 10px;
+    }
+    .flexCart{
+        margin-bottom: 10px;
+    }
+
+
+    .total{
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .total p{
+        margin: 0;
+    }
+
+    .precio-del-resumen{
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .precio-del-resumen p{
+        margin: 0;
+    }
+}
+
+
+
+
+@media (min-width: 1280px){
+    .carrito{
+        margin: 40px 0 90px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .container-vans{
+        width: 60%;
+        margin: 0;
+    }
+
+    .resumen-de-la-compra{
+        width: 30%;
+        margin: 0;
+    }
+
+    .van-parte-seleccionar{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+      
+    }
+
+    .van-parte-compra{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    .imagenes{
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-vans{
+        margin-left: 20px;
+    }
+
+    .resumen-de-la-compra{
+        margin-right: 20px;
+    }
+}
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="../../../CSS/main/home.css">
+    <link rel="stylesheet" href="../../../CSS/products/productCreation.css">
+    <title>Editar producto</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-bar">
+            <ul class="link-list" type="none">
+                <li class="nav-header-item"><img src="../../../images/imagenesVariadas/logo.png" alt="Logo Argentina campers" class="logoAC"></li>
+                <li class="nav-header-item home"><a href="../../home" class="links-header-nav"><h2>Home</h2></a></li>
+                <li class="nav-header-item products"><a href="../../products" class="links-header-nav"><h2>Nuestras CamperVans</h2></a></li>
+                <li class="nav-header-item about-us"><a href="../../aboutUs" class="links-header-nav"><h2>Sobre nosotros</h2></a></li>
+                <li class="carro-header nav-header-item"><a href="../../rental-cart" class="links-header-nav carrito-header"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="nav-header-item menu"><a href="#"><i class="fa-solid fa-bars burger-menu"></i></a></li>
+                <% if(locals.isLogged) { %>
+                    <li class="menu-horizontal">
+                        <div class="foto-y-perfil">
+                            <div class="contenedor-foto-perfil">
+                                <img src="../../../../images/avatarPerfil/<%= locals.userLogged.avatar %> " alt="Foto de perfil" class="foto-de-perfil">
+                            </div>
+                            <a href="#" class="link-menu-horizontal"><%= locals.userLogged.firstName + ' ' + locals.userLogged.lastName %></a>
+                            <a href="#"><div class="nav-header-username-chevron"></div></a>
+                        </div>
+                        <ul class="sub-menu-vertical">
+                            <li><a href="../../profile" class="link-menu-vertical mi-perfil">Mi perfil</a></li>
+                            <% if(locals.admin) { %> 
+                                <li><a href="../../all-users" class="link-menu-vertical all-users">Todos los usuarios</a></li>
+                            <% } %> 
+                            <li><a href="../../logout" class="link-menu-vertical cerrar-sesion">Cerrar sesion</a></li>
+                        </ul>
+                    </li>
+                <% } else { %> 
+                    <ul class="iniciar-sesion">
+                        <li class="usuario"><a href="../../login" class="links-header links-header-user"><i class="fa-solid fa-right-to-bracket"></i>Iniciar sesion</a></li>
+                        <li class="usuario"><a href="../../register" class="links-header links-header-user"><i class="fa-solid fa-address-card"></i>Registrarse</a></li>
+                    </ul>
+                <% } %> 
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Todo el cuerpo -->
+
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="../../home">Home</a> / <a href="edit">Edicion del producto</a></h3>
+        </article>
+    </section>
+
+    <!-- Cuerpo -->
+    <section class="cuerpo">
+        <form  method="post" action="/products/<%= producto.id %>/edit?_method=put" enctype="multipart/form-data" class="formulario-de-creacion-de-producto">
+            <div class="formulario-para-el-producto nombre-del-producto-a-crear">
+                <label for="marca-del-producto">Marca del producto</label>
+                <input 
+                type="text" 
+                name="marcaDelProducto" 
+                id="marca-del-producto"
+                placeholder="<%= producto.marca %>"
+                class= "inputForms <%= locals.errors && errors.marcaDelProducto ? 'is-invalid' : null %>" 
+                value="<%= locals.oldData && oldData.marcaDelProducto ? oldData.marcaDelProducto : null %>">
+                <% if (locals.errors && errors.marcaDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.marcaDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto nombre-del-producto-a-crear">
+                <label for="modelo-del-producto">Modelo del producto</label>
+                <input 
+                type="text" 
+                name="modeloDelProducto" 
+                id="modelo-del-producto"
+                placeholder="<%= producto.modelo %>" 
+                class="inputForms <%= locals.errors && errors.modeloDelProducto ? 'is-invalid' : null %>"  
+                value="<%= locals.oldData && oldData.modeloDelProducto ? oldData.modeloDelProducto : null %>"
+                >
+                <% if (locals.errors && errors.modeloDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.modeloDelProducto.msg %> </p>
+                    </div>
+                <% } %>
+            </div>
+            <div class="formulario-para-el-producto imagen-del-producto-a-crear">
+                <label for="imagen-del-producto">Inserte la imagen que quiera usar</label>
+                <input type="file" name="imagenDelProducto" id="imagen-del-producto-a-crear" accept=".jpg, .png">
+                <% if (locals.errors && errors.imagenDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.imagenDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto descripcion-del-producto-a-crear">
+                <label for="descripcion-del-producto">Descripcion del producto</label>
+                <textarea 
+                name="descripcionDelProducto" 
+                id="descripcion-del-producto" 
+                cols="30" 
+                rows="10"
+                placeholder="<%= producto.detalle %>"   
+                class="text-area <%= locals.errors && errors.descripcionDelProducto ? 'is-invalid' : null %>"><%= locals.oldData && oldData.descripcionDelProducto ? oldData.descripcionDelProducto : null %></textarea>
+                <% if (locals.errors && errors.descripcionDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.descripcionDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto nombre-del-producto-a-crear">
+                <label for="capacidad-del-producto">Capacidad del producto</label>
+                <input 
+                type="number"
+                name="capacidadDelProducto" 
+                id="capacidad-del-producto"
+                placeholder="<%= producto.capacidad %>"  
+                class="inputForms <%= locals.errors && errors.capacidadDelProducto ? 'is-invalid' : null %>" 
+                value="<%= locals.oldData && oldData.capacidadDelProducto ? oldData.capacidadDelProducto : null %>"
+                >
+                <% if (locals.errors && errors.capacidadDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.capacidadDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto cambiar-a-creacion-de-producto">
+                <a href="../create">Quieres crear un producto? Click aqui</a>
+            </div>
+            <div class="formulario-para-el-producto botones-submit-delete">
+                <button type="submit">Enviar</button>
+                <button type="delete">Borrar todo</button>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- Footer --> 
+    <%- include('../partials/footer') %>
+</body>
+</html>

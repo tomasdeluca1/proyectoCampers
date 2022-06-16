@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="../../../CSS/users/userProfile.css"> 
+    <title>Perfil de usuario</title>
+</head>
+<body>
+    <!--Header-->
+    <%- include('../partials/header') %> 
+
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="home">Home</a> / <a href="profile">Mi perfil</a></h3>
+        </article>
+    </section>
+    <main class="body">
+        <div class="container-user-data">
+            <div class="mis-datos-div">
+                <h2 class="mis-datos-titulo">Mi perfil</h2>
+            </div>
+            <div class="container-name-email-image-user">
+                <div class="foto-de-perfil-user">
+                    <div class="foto-de-perfil-user-div">
+                        <img src="../../../images/avatarPerfil/<%= user.avatar %>" alt="Foto de perfil" class="foto-de-perfil-info">
+                    </div>
+                </div>
+                <div class="name-email-user">
+                    <p class="name"><%= ' ' + user.firstName + ' ' + user.lastName %></p>
+                    <p class="email"><%= user.email %>    </p>
+                </div>
+            </div>
+            <!-- <div class="container-edicion-de-datos">
+                <div>
+                    <a href="" class="edicion-de-datos">
+                        <div class="foto-de-perfil-user">
+                            <div class="foto-de-perfil-user-div">
+                                <img src="../../../images/avatarPerfil/<%= user.avatar %>" alt="Foto de perfil" class="foto-de-perfil-info">
+                            </div>
+                        </div>
+                        <div class="gestion-de-datos">
+                            <p class="mis-datos">Mis datos</p>
+                            <p class="editar-mis-datos">Editar mis datos</p>
+                            <p class="gestionar-mis-datos">Gestionar mis datos</p>
+                        </div>
+                        <div class="flechita">
+                            <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.449999988"><polygon fill="#000000" fill-rule="nonzero" transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)" points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923"></polygon></g></svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="linea-gris"></div>
+            </div> -->
+        </div>
+    </main>
+    <!--FOOTER-->
+    <%- include('../partials/footer') %> 
+</body>
+</html>

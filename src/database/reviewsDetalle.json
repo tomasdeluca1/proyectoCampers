@@ -1,0 +1,32 @@
+[
+    {
+     "id": 1,
+     "nombre": "Tomás Deluca",
+     "email": "tomasdelucaa@gmail.com",
+     "destino": "La ruta del vino, Mendoza",
+     "rate": "Gran experiencia",
+     "estrellas": "★★★★",
+     "titulo": "Una aventura por el norte",
+     "descripcion": "Con mi pareja realizamos la ruta de los vinos con la Citröen Jumpy. La atención de Martín y Horacio fue realmente excelente, no tuvimos mayores inconvenientes, pero los que tuvimos nos los pudieron resolver con rapidez."
+    },
+    {
+     "id": 2,
+     "nombre": "Fran Isola",
+     "email": "franciscoisola1@gmail.com",
+     "destino": "Neuquen",
+     "rate": "Gran experiencia",
+     "estrellas": "★★★★",
+     "titulo": "Viaje de relax",
+     "descripcion": "Una escapadita nunca le viene mal a nadie. Yo la hice con la Renault Kangoo. Todas las comodidades necesarias para viajar comodo y relajado."
+    },
+    {
+     "id": 3,
+     "nombre": "Agus Giraldez",
+     "email": "agusgiraldez@gmail.com",
+     "destino": "Tierra del fuego, Usuahia",
+     "rate": "Experiencia única",
+     "estrellas": "★★★★★",
+     "titulo": "Camper Van de lujo",
+     "descripcion": "Viajé con 3 amigos en la Toyota Hiace y fue una aventura en todo momento, completamente recomendado. Fue una experiencia tremenda y completamente recomendable"
+    }
+   ]

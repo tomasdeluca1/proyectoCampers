@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="../CSS/aboutUs/styles.css">
+
+    <!--HEAD INCLUDE-->
+    <%- include("../partials/head") %> 
+    
+    <title>Sobre Nosotros</title>
+</head>
+<body>
+
+    <!--HEADER--> 
+    
+    <%- include("../partials/header") %>    
+
+   
+    <!--SOBRE NOSOTROS-->
+  
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="home">Home</a> / <a href="aboutUs">About us</a></h3>
+        </article>
+    </section>
+        <div class="bannerAboutUs">
+            <img src="/images/imagenesVariadas/aboutUs1.png" alt="1er parte del banner" class="bannerConjunto">
+            <img src="/images/imagenesVariadas/aboutUs5.png" alt="3era parte del banner" class="bannerConjunto">
+            <img src="/images/imagenesVariadas/aboutUs2.png" alt="2da parte del banner" class="bannerConjunto">
+            <img src="/images/imagenesVariadas/aboutUs3.png" alt="3era parte del banner" class="bannerConjunto">
+          </div>
+        <div class="aboutUs"> 
+        <div class="contenedorText" >
+            <h2>Sobre nosotros</h2>
+            <h4> 
+                Detrás de Argentina Campers hay un equipo de viajeros expertos que te brindarán el mejor servicio y el apoyo necesario para que tu viaje sea inolvidable. Somos amantes de la naturaleza, la libertad, el disfrute y los buenos momentos con la familia y los amigos.
+            </h4>
+            <h4> 
+                Cada rincón de Argentina vale la pena para recorrer. Amamos nuestra tierra y sus diversos paisajes. Su cultura y gente; siempre dispuesta a dar una mano o compartir un mate donde quieras parar; donde la noche te encuentra en el camino o el sol te da la bienvenida al amanecer para continuar con la travesía. Bienvenidos a este club de viajeros, dueños del tiempo y creadores de sus propias aventuras.
+                Ponte en marcha, la naturaleza te espera.
+            </h4>
+        </div>
+    
+<!-- Agregar testimonios de clientes de Argentina Campers -->
+
+    <h3 class="viajerosContentos">Experiencias de nuestros clientes</h3>
+   <div class="reviews-row">
+    <%- include('./partials/reviews') %> 
+   </div>
+
+<!-- Testimonios version antigua -->
+<script src="https://use.fontawesome.com/a6f0361695.js"></script>
+
+<h2 id="fh2">¡Compartí tu experiencia con la comunidad!</h2>
+
+
+<form id="feedback" action="aboutUs" method="post">
+    <div class="pinfo">Nombre o apodo</div>
+  
+    <div class="form-group">
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+      <input  name="viajero" placeholder="Juan Díaz" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+    
+    <div class="pinfo">Destino</div>
+    <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+        <input  name="destino" placeholder="Bariloche, Río Negro" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+ 
+  
+ <p class="clasificacion">
+    <label for="radio5">★</label><input id="radio5" type="radio" name="estrellas" value="★★★★★"><!--
+  --><label for="radio4">★</label><input id="radio4" type="radio" name="estrellas" value="★★★★"><!--
+  --><label for="radio3">★</label><input id="radio3" type="radio" name="estrellas" value="★★★"><!--
+  --><label for="radio2">★</label><input id="radio2" type="radio" name="estrellas" value="★★"><!--
+  --><label for="radio1">★</label><input id="radio1" type="radio" name="estrellas" value="★"><!--
+  -->
+</p>
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon">★</i></span>
+   <select class="form-control" name="rate">
+      <option disabled selected value> Calificá tu viaje </option>
+      <option value="No recomendable">No recomendable</option>
+      <option value="Aceptable">Aceptable</option>
+      <option value="Buena experiencia">Buena experiencia</option>
+      <option value="Gran experiencia">Gran experiencia</option>
+      <option value="Experiencia única">Experiencia única</option>
+    </select>
+    </div>
+  </div>
+</div>
+<div class="pinfo" style="text-align: center;">Título de la aventura</div>
+ <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+    <input class="form-control" type="text" name="adventureTitle" max="30">
+   
+      </div>
+    </div>
+  </div>
+  <div class="pinfo" style="text-align: center;">Descripción</div>
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+  <textarea class="form-control" name="adventureDescription" rows="4"></textarea>
+ 
+    </div>
+  </div>
+</div>
+
+ <button type="submit" class="btn btn-primary">Enviar</button>
+
+
+</form>
+
+<!--// include("../testimonios") -->
+</div>
+
+
+    
+  
+</div>
+    <!--FOOTER-->
+
+    <%- include("../partials/footer") %> 
+
+</body>
+</html>

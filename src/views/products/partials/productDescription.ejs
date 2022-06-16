@@ -1,0 +1,38 @@
+<% if (mostrarProducto) { %>
+    <div class="todo-el-producto">
+        <div class="imagen-descripcion">
+            <img src="../images/imagenesproductos/<%= mostrarProducto.img %>" alt="<%= mostrarProducto.marca + " " + mostrarProducto.modelo %>">
+        </div>
+        <div class="parte-de-la-derecha">
+            <div class="titulo">
+                <h2><%= mostrarProducto.marca + " " + mostrarProducto.modelo %></h2>
+            </div>
+            <div class="descripcion-del-producto">
+                <p><%= mostrarProducto.detalle %></p>
+            </div>
+            <form action="" method="post">
+                <div class="div-seleccion-de-tiempo">
+                    <label for="selector">Elige el tiempo de tus vacaciones!</label>
+                    <select name="seleccion-de-tiempo" id="selector">
+                        <option value="">7 días</option>
+                        <option value="">15 días</option>
+                        <option value="">30 días</option>
+                    </select>
+                </div>
+                <div class="button-selector">
+                    <button type="submit">Comprar ahora</button>
+                    <button type="submit">Agregar al carrito</button>
+                </div>
+            </form>
+            <% if(locals.admin) { %> 
+                <div class="buttons-admin">
+                    <div class="link-editar">
+                        <a href="<%= mostrarProducto.id %>/edit">Editar</a>
+                    </div>
+                    <form action="/products/<%= mostrarProducto.id %>/delete?_method=delete" method="post" class="link-editar">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div> 
+            <% } %> 
+    </div> 
+<% } %> 

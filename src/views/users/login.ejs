@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('../partials/head') %> 
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="./css/users/login.css">
+
+
+</head>
+<body>
+    <!--Header-->
+    <%- include('../partials/header') %> 
+
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="home">Home</a> / <a href="login">Iniciar sesión</a></h3>
+        </article>
+    </section>
+
+
+    <!--CUERPO DEL CODIGO-->
+    <main class="body">
+        <div class="container-texto">
+            <p class="texto-explicativo">Somos una empresa que distintos opciones de vehículos para viajar por la Argentina y redescubrirse, permitiendo explorar distintos lugares sin la necesidad de buscar hoteles y formas de viajar. Esto abarataría tanto costos como formas de viaje, fusionándolos para darle a nuestros clientes una experiencia única de poder tener su alojamiento en donde quiera.</p>
+        </div>
+        <form class="formulario-login" action="login" method="post">
+            <div class="input-label-form">
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="Ingrese su email"
+                class="input-login <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                value="<%= locals.oldData && oldData.email && !errors.email ? oldData.email : null%>"
+                >  
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errors">
+                        <p><%= errors.email.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="input-label-form">
+                <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                placeholder="Contraseña"
+                class="input-login <%= locals.errors && errors.password && errors.email == undefined ? 'is-invalid' : null %>"
+                >
+                <% if (locals.errors && errors.password && errors.email == undefined) { %>
+                    <div class="errors">
+                        <p><%= errors.password.msg %> </p>
+                    </div>
+                <% } %>
+            </div>
+            <div class="input-label-form remember-user-div">
+                <input type="checkbox" name="rememberUser" id="remember-user">
+                <label for="remember-user" class="remember-user">Recordar mi usuario</label>
+            </div>
+            <div class="input-label-form button-iniciar-sesion">
+                <button>Iniciar sesion</button>
+            </div>
+            <div class="input-label-form password-forgotten">
+                <a href="">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="linea"></div>
+            <div class="input-label-form link-registrarse">
+                <a href="register">¿No tienes cuenta? Crea tu cuenta aqui</a>
+            </div>
+        </form>
+    </main>
+    <!--FOOTER-->
+    <%- include('../partials/footer') %> 
+</body>
+</html>

@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+.formulario-de-creacion-de-producto{
+    color:#957f65;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #957f65;
+    border-radius: 10px;
+    margin: 50px 0 120px 0;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0px 1px 5px 3px rgba(149, 127, 101, 1);
+}
+
+
+
+.formulario-para-el-producto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 90%;
+    text-align: center;
+}
+
+.formulario-para-el-producto label{
+    margin: 15px 0;
+}
+
+.inputForms{
+    width: 80%;
+    height: 30px;
+    border-radius: 0.5rem;
+    border: #957f65 1px solid;
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+}
+
+.text-area{
+    border-radius: 1rem;
+    border: 2px solid #957f65;
+    width: 80%;
+    padding: 10px;
+}
+
+
+.cambiar-a-creacion-de-producto{
+    width: auto;
+}
+
+.cambiar-a-creacion-de-producto a{
+    color: #957f65;
+    text-decoration: none;
+    transition: all 100ms;
+}
+
+.cambiar-a-creacion-de-producto a:hover{
+    cursor: pointer;
+    color: #4d3319;
+}
+
+
+.botones-submit-delete button{
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    margin: 10px 0;
+    color: #ffeed2;
+    background-color: #957f65;
+    border: 1px solid #957f65;
+    border-radius: 10px;
+    transition: all 400ms;
+    padding: 5px 0;
+}
+
+.botones-submit-delete button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    color: #957f65;
+    background-color: #ffeed2;
+    border: 1px solid #ffeed2;
+}
+
+.errors{
+    margin-top: 15px;
+}
+
+.errors p{
+    color: red;
+}
+
+.is-invalid{
+    border: 1px solid red;
+}
+
+
+@media (min-width: 0) and (max-width: 480px){
+    .formulario-de-creacion-de-producto{
+        width: 90%;
+    }
+    .text-area{
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .formulario-de-creacion-de-producto{
+        width: 60%;
+    }
+    .text-area{
+        width: 100%;
+    }
+}
+
+@media (min-width:769px) and (max-width:1279px){
+    .formulario-de-creacion-de-producto{
+        width: 40%;
+    }
+}
+
+@media (min-width:1280px){
+    .formulario-para-el-producto label{
+        font-size: 20px;
+        color: #957f65;
+        opacity: 1;
+    }
+}
+

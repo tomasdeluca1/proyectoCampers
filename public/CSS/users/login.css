@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: #ffeed2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-texto{
+    margin: 60px 0;
+    width: 40%;
+    text-align: center;
+}
+
+.container-texto p{
+    color: #957f65;
+}
+
+
+.formulario-login{
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border: 2px solid #957f65;
+    border-radius: 1.5rem;
+    margin: 60px 0;
+    padding: 20px;
+}
+
+.input-label-form{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+.input-login{
+    width: 100%;
+    padding: 5px;
+    border: #BDA48A 2px solid;
+    border-radius: 1.5rem;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.button-iniciar-sesion{
+    width: 50%;
+}
+
+.button-iniciar-sesion button{
+    padding: 10px;
+    background-color: #957f65;
+    border: 1px solid #957f65;
+    border-radius: 1.5rem;
+    color: white;
+    width: 100%;
+    transition: all 100ms;
+}
+
+.button-iniciar-sesion button:hover{
+    cursor: pointer;
+    color: #957f65;
+    background-color: white;
+}
+
+.password-forgotten{
+    width: 50%;
+    margin-top: 15px;
+}
+
+.password-forgotten a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: #957f65;
+    transition: all 100ms;
+}
+
+.password-forgotten a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.password-forgotten a:visited{
+    color: #957f65;
+}
+
+.linea{
+    width: 90%;
+    margin: 15px 0;
+    border-top: 1px solid grey;
+    opacity: 0.2;
+}
+
+.link-registrarse{
+    width: 100%;
+}
+
+.link-registrarse a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: #957f65;
+    transition: all 100ms;
+}
+
+.link-registrarse a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link-registrarse a:visited{
+    color: #957f65;
+}
+
+.errors{
+    margin-top: 15px;
+}
+
+.errors p{
+    color: red;
+}
+
+.is-invalid{
+    border: 1px solid red;
+}
+
+.remember-user-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.remember-user{
+    padding-left: 5px;
+}
+
+.remember-user:hover{
+    cursor: pointer;
+}
+
+
+@media (min-width: 0) and (max-width: 480px){
+    .body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .formulario-login{
+        margin: 40px 0;
+        padding: 10px 20px;
+    }
+
+    .container-texto{
+        display: none;
+    }
+
+    .formulario-login{
+        width: 85%;
+    }
+
+    .input-label-form{
+        width: 85%;
+    }
+
+    .button-iniciar-sesion{
+        width: 85%;
+    }
+
+    .password-forgotten{
+        width: 100%;
+    }
+
+    .link-registrarse{
+        width: 100%;
+    }
+
+    .link-registrarse a{
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .container-texto{
+        display: none;
+    }
+
+    .formulario-login{
+        width: 70%;
+        margin: 60px 0;
+    }
+
+    .password-forgotten{
+        width: 100%;
+    }
+
+    .link-registrarse{
+        width: 100%;
+    }
+
+    .link-registrarse a{
+        width: 100%;
+    }
+}
+
+@media (min-width:769px) and (max-width:1279px) {
+    .container-texto{
+        width: 35%;
+        margin: 0;
+    }
+
+    .formulario-login{
+        width: 38%;
+        margin: 60px 0;
+    }
+
+    .password-forgotten{
+        width: 100%;
+    }
+
+    .link-registrarse{
+        width: 100%;
+    }
+
+    .link-registrarse a{
+        width: 100%;
+    }
+}

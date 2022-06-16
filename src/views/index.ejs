@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+    <%- include('./partials/head') %> 
+    <title>Home</title>
+</head>
+<body>
+    <%- include('./partials/header') %> 
+
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="home">Home </a> /</h3>
+        </article>
+    </section>
+
+
+
+    <section class="cuerpo">
+        <div class="contenedor">
+            <img src="/images/imagenesVariadas/nuestrosVehiculos.png" alt="Banner principal" class="imagenCentrada">
+            <div class="textoCentrado">Home</div>
+        </div>
+       <div class="parte-central">
+           <div class="parte-de-arriba"> 
+                <p class="titulo-uno">Argentina Campers</p>
+                <h2 class="titulo-dos">Descubre nuestros vehiculos...</h2>  
+           </div>
+           <hr>
+           <div class="parte-de-abajo">
+                <div class="fechaYHoraDevolucion">
+                    <div class="este-lleva-linea">
+                        <label>Hora de retiro</label> 
+                        <input type="time" class="casillasHome">
+                    </div>
+                    <div class="este-lleva-linea">
+                        <label>Hora de devolución</label> 
+                        <input type="time" class="casillasHome">
+                    </div>
+                    <div class="este-lleva-linea">
+                        <label>Fecha de retiro</label> 
+                        <input type="date" name="fecha" placeholder="" class="casillasHome">
+                    </div>
+                    <div class="este-lleva-linea">
+                        <label>Fecha de devolución</label> 
+                        <input type="date" name="fecha" class="casillasHome">
+                    </div>  
+                    <div class="texto">
+                        <div class="este-lleva-linea">
+                            <label>Punto de retiro</label>
+                            <input type="text" placeholder="Buenos Aires" class="casillasHome">
+                        </div>
+                        <div class="este-lleva-linea">
+                            <label>Punto de devolución</label>
+                            <input type="text" placeholder="Bariloche" class="casillasHome">
+                        </div>
+                    </div> 
+                </div>
+            </div>        
+       </div>
+       <div class="nuestros-vehiculos">
+            <h2>
+                Nuestros vehiculos
+            </h2>
+        </div>
+        <div class="vehiculos">
+            <div class="vehiculo">
+                <img src="/images/imagenesproductos/kangoo.png" alt="Renault Kangoo" class="imagen-van">
+                <p>Renault Kangoo</p>
+            </div>
+            <div class="vehiculo">
+                <img src="/images/imagenesproductos/citroenjumpy.png" alt="Citroen Jumpy"  class="imagen-van">
+                <p>Citroen Jumpy</p>
+            </div>
+            <div class="vehiculo">
+                <img src="/images/imagenesproductos/toyotahiace.png" alt="Toyota Hiace"  class="imagen-van">
+                <p>Toyota Hiace</p>
+            </div>
+        </div>
+        <div class="nuestras-ubicaciones-populares">
+            <h2>
+                Nuestras ubicaciones populares
+            </h2>
+        </div>
+        <div class="ubicaciones">
+            <div class="div-img">
+                <img src="/images/imagenesVariadas/ubicacion1.jpg" class="ubicacion" alt="paisaje">
+            </div>
+            <div class="div-img">
+                <img src="/images/imagenesVariadas/ubicacion2.jpg" class="ubicacion" alt="paisaje">
+            </div>
+            <div class="div-img"> 
+                <img src="/images/imagenesVariadas/ubicacion3.jpg" class="ubicacion" alt="paisaje">
+            </div>
+            <div class="div-img">
+                <img src="/images/imagenesVariadas/ubicacion4.jpg" class="ubicacion" alt="paisaje">
+            </div>
+        </div>
+
+        <!-- Mensaje Posicion absoluta -->
+
+        <%- include('./partials/msjPosicionAbsoluta') %> 
+    </section>
+    
+
+    <!-- Footer -->
+    <%- include('./partials/footer') %> 
+</body>
+</html>

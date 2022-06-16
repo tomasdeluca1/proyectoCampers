@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: #ffeed2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formulario-register{
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border: 2px solid #957f65;
+    border-radius: 1.5rem;
+    margin: 60px 0;
+    padding: 10px;
+}
+
+.input-label-form{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.label-register{
+    align-self: flex-start;
+    margin: 5px 0;
+}
+
+.input-register{
+    width: 100%;
+    padding: 5px;
+    border: #BDA48A 2px solid;
+    border-radius: 1.5rem;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.elegir-avatar-label{
+    align-self: center;
+}
+
+.elegir-avatar-input{
+    text-align: center;
+    border: 0cm;
+    border-radius: 0;
+    padding: 0;
+}
+
+.numero-de-telefono-label{
+    align-self: center;
+}
+
+.numero-de-telefono-input{
+    text-align: center;
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.link-para-iniciar-sesion{
+    margin: 15px 0;
+}
+
+.link-para-iniciar-sesion a{
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: #957f65;
+    transition: all 100ms;
+}
+
+.link-para-iniciar-sesion a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.button-registrarse{
+    width: 50%;
+}
+
+.button-registrarse button{
+    padding: 10px;
+    background-color: #957f65;
+    border: 1px solid #957f65;
+    border-radius: 1.5rem;
+    color: white;
+    width: 100%;
+    transition: all 100ms;
+}
+
+.button-registrarse button:hover{
+    cursor: pointer;
+    color: #957f65;
+    background-color: white;
+}
+
+.errors{
+    margin-top: 15px;
+}
+
+.errors p{
+    color: red;
+}
+
+.is-invalid{
+    border: 1px solid red;
+}
+
+
+
+@media (min-width: 0) and (max-width: 480px){
+    .formulario-register{
+        width: 85%;
+        margin: 30px 0;
+    }
+
+    .numero-de-telefono-input{
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .formulario-register{
+        width: 60%;
+        margin: 30px 0;
+    }
+    .numero-de-telefono-input{
+        width: 100%;
+    }
+}
+
+@media (min-width:769px) and (max-width:1279px) {
+    .formulario-register{
+        width: 45%;
+        margin: 60px 0;
+    }
+    .numero-de-telefono-input{
+        width: 80%;
+    }
+}

@@ -1,0 +1,46 @@
+[
+    {
+     "id": 1,
+     "firstName": "Francisco",
+     "lastName": "Isola",
+     "userName": "Fran isola",
+     "email": "frandelqueran@gmail.com",
+     "password": "$2a$10$xSVqpAESno1sLHLXZLjSKO4Lx4Ogmyz/f3gcVc.nu9QRoL908m/L6",
+     "phoneNumber": "",
+     "avatar": "avatarDefault.png",
+     "typeOfUser": 1
+    },
+    {
+     "id": 2,
+     "firstName": "Tomi",
+     "lastName": "De luca",
+     "userName": "tomi de luca",
+     "email": "tomi@gmail.com",
+     "password": "$2a$10$DDKuhUpXivrSknQcmWxK7ebGb7J0FT60oY8F3an80Wz68TEoeKWXO",
+     "phoneNumber": "",
+     "avatar": "avatarDefault.png",
+     "typeOfUser": 2
+    },
+    {
+     "id": 3,
+     "firstName": "Agustin",
+     "lastName": "Giraldez",
+     "userName": "agus giraldez",
+     "email": "agusgiraldez@gmail.com",
+     "password": "$2a$10$m9CGmXoygULI1aAbBIoQduQVXHuN0juVvRSDx/.JetiGo6KMuaDbO",
+     "phoneNumber": "",
+     "avatar": "avatarDefault.png",
+     "typeOfUser": 2
+    },
+    {
+     "id": 4,
+     "firstName": "Lionel",
+     "lastName": "Messi",
+     "userName": "lio messi",
+     "email": "lionelmessi@gmail.com",
+     "password": "$2a$10$k55Lg/vRQC4tLUbIxWwKDe2piRf2X7PDcm6FS7jIjvl6xgtMYvKhK",
+     "phoneNumber": "12211231321",
+     "avatar": "   ",
+     "typeOfUser": 2
+    }
+   ]

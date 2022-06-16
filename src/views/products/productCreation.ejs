@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="../css/products/productCreation.css">
+    <title>Crear producto</title>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('../partials/header') %>
+
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="../home">Home</a> / <a href="create">Creacion del producto</a></h3>
+        </article>
+    </section>
+
+    <!-- Cuerpo -->
+    <section class="cuerpo"> 
+        <form action="create" method="post" enctype="multipart/form-data" class="formulario-de-creacion-de-producto">
+            <div class="formulario-para-el-producto nombre-del-producto-a-crear">
+                <label for="marca-del-producto">Marca del producto</label>
+                <input 
+                type="text" 
+                name="marcaDelProducto" 
+                id="marca-del-producto" 
+                class="inputForms <%= locals.errors && errors.marcaDelProducto ? 'is-invalid' : null %>"
+                value="<%= locals.oldData && oldData.marcaDelProducto ? oldData.marcaDelProducto : null %>"
+                >
+                <% if (locals.errors && errors.marcaDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.marcaDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto nombre-del-producto-a-crear">
+                <label for="modelo-del-producto">Modelo del producto</label>
+                <input 
+                type="text" 
+                name="modeloDelProducto" 
+                id="modelo-del-producto" 
+                class="inputForms <%= locals.errors && errors.modeloDelProducto ? 'is-invalid' : null %>"
+                value="<%= locals.oldData && oldData.modeloDelProducto ? oldData.modeloDelProducto : null %>"
+                >
+                <% if (locals.errors && errors.modeloDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.modeloDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto imagen-del-producto-a-crear">
+                <label for="imagen-del-producto">Inserte la imagen que quiera usar</label>
+                <input 
+                type="file" 
+                name="imagenDelProducto" 
+                id="imagen-del-producto-a-crear" 
+                accept=".jpg, .png"
+                >
+                <% if (locals.errors && errors.imagenDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.imagenDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto descripcion-del-producto-a-crear">
+                <label for="descripcion-del-producto">Descripcion del producto</label>
+                <textarea 
+                name="descripcionDelProducto" 
+                id="descripcion-del-producto" 
+                cols="30" 
+                rows="10"
+                class="text-area <%= locals.errors && errors.descripcionDelProducto ? 'is-invalid' : null %>" 
+                ><%= locals.oldData && oldData.descripcionDelProducto ? oldData.descripcionDelProducto : null %></textarea>
+                <% if (locals.errors && errors.descripcionDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.descripcionDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto nombre-del-producto-a-crear">
+                <label for="capacidad-del-producto">Capacidad del producto</label>
+                <input 
+                type="number" 
+                name="capacidadDelProducto" 
+                id="capacidad-del-producto" 
+                class="inputForms <%= locals.errors && errors.capacidadDelProducto ? 'is-invalid' : null %>"
+                value="<%= locals.oldData && oldData.capacidadDelProducto ? oldData.capacidadDelProducto : null %>"
+                >
+                <% if (locals.errors && errors.capacidadDelProducto) { %>
+                    <div class="errors">
+                        <p><%= errors.capacidadDelProducto.msg %> </p>
+                    </div>
+                <% } %> 
+            </div>
+            <div class="formulario-para-el-producto botones-submit-delete">
+                <button type="submit">Enviar</button>
+                <button type="delete">Borrar todo</button>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

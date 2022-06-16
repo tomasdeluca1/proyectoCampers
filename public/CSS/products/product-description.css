@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFEED2;
+}
+
+.todo-el-producto{
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0;
+    padding: 30px;
+    border: 1px solid #FFEED2;
+    border-radius: 2rem;
+    box-shadow:0px 1px 5px 3px rgba(149, 127, 101, 1);
+}
+
+.parte-de-la-derecha{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45%;
+    height: 100%;;   
+}
+
+.imagen-descripcion{
+    width: 45%;
+    text-align: center;
+}
+
+.imagen-descripcion img{
+    width: 75%;
+    height: 75%;
+}
+
+.titulo{
+    margin: 0px 0 30px 0;
+}
+
+.descripcion-del-producto{
+    text-align: left;
+}
+
+form{
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.div-seleccion-de-tiempo{
+    width: 100%;
+    margin: 0px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.div-seleccion-de-tiempo label{
+    margin: 10px 0;
+}
+
+.div-seleccion-de-tiempo select{
+    margin: 10px 0;
+    width: 25%;
+    background-color: #FFEED2;
+    border: 1px solid #957f65;
+    border-radius: 1.5rem;
+    padding: 5px;
+}
+
+.button-selector{
+    width: 50%;
+    text-align: center;
+}
+.buttons-admin{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 100%;
+margin-top: 10px;
+}
+
+.button-selector button{
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    background-color: #FFEED2;
+    border: 2px solid #957f65;
+    border-radius: 1.5rem;
+    transition: all 350ms;
+}
+
+.button-selector button:hover{
+    cursor: pointer;
+    box-shadow:0px 1px 5px 3px rgba(149, 127, 101, 0.2);
+}
+
+.link-editar{
+    width: 40%;
+    align-self: center;
+    text-align: center;
+    margin: 5px;
+    padding: 6px;
+    background-color: #957f65;
+    border: 2px solid #FFEED2;
+    border-radius: 1.5rem;
+    transition: all 350ms;
+}
+
+.link-editar:hover{
+    background-color: #FFEED2;
+    border: 2px solid #957f65;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px 3px rgba(149, 127, 101, 0.2);
+}
+
+.link-editar a{
+    text-decoration: none;
+    color: #FFEED2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 350ms;
+}
+
+.link-editar a:visited{
+    color: #FFEED2;;
+}
+
+.link-editar:hover a{
+    color: #957f65;
+}
+
+
+.link-editar button{
+    background-color: #957f65;
+    border: 1px solid #957f65;
+    color: #FFEED2;
+    font-size: 16px;
+    transition: all 350ms;
+}
+
+.link-editar:hover button{
+    background-color: #FFEED2;
+    border: 1px solid #FFEED2;
+    color: #957f65;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+

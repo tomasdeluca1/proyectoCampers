@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color: #ffeed2;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-user-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.mis-datos-div{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.mis-datos-editar{
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.container-name-email-image-user{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 25px 40px 25px 40px;
+    border-radius: 10px;
+    border: .125rem solid #957f65;
+}
+
+.name-email-user{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+    align-self: stretch;
+}
+.name{
+    margin-bottom: 5px;
+}
+
+.email{
+    margin-top: 5px;
+}
+
+.foto-de-perfil-user{
+    border-radius: 50%;
+    border: .125rem solid #957f65;
+    padding: 4px;
+    background-color: #ffffff;
+}
+
+.foto-de-perfil-user-div{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.foto-de-perfil-info{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+
+.container-edicion-de-datos{
+    width: 100%;
+    background-color: #ffffff;
+    margin: 30px 0;  
+    border-radius: 10px;
+    padding: 25px 40px 25px 40px;
+    border: .125rem solid #957f65;
+}
+
+
+.edicion-de-datos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.gestion-de-datos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+    align-self: stretch;
+    width: auto;
+}
+
+.mis-datos{
+    margin-bottom: 5px;
+}
+
+.editar-mis-datos{
+    display: none;
+}
+
+.gestionar-mis-datos{
+    margin-top: 5px;
+}
+
+.flechita{
+    flex-grow: 1;
+    text-align: right;
+}
+
+.linea-gris{
+    width: 100%;
+    margin: 15px 0;
+    border-top: 1px solid grey;
+    opacity: 0.2;
+}
+
+@media (min-width: 0) and (max-width: 480px){
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+    .container-user-data{
+        width: 80%;
+    }
+
+    .mis-datos-div{
+        text-align: center;
+    }
+
+    .foto-de-perfil-user{
+        margin-bottom: 10px;
+    }
+
+    .container-name-email-image-user{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .name-email-user {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0 0 0;
+    }
+
+    .edicion-de-datos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gestion-de-datos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .editar-mis-datos{
+        display: block;
+        margin-top: 5px;
+    }
+
+    .gestionar-mis-datos{
+        display: none;
+    }
+
+    .flechita{
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+    .container-user-data{
+        width: 60%;
+    }
+
+    .mis-datos-div{
+        text-align: center;
+    }
+
+    .foto-de-perfil-user{
+        margin-bottom: 10px;
+    }
+
+    .container-name-email-image-user{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .name-email-user {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0 0 0;
+    }
+
+    .edicion-de-datos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gestion-de-datos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .editar-mis-datos{
+        display: block;
+        margin-top: 5px;
+    }
+
+    .gestionar-mis-datos{
+        display: none;
+    }
+
+    .flechita{
+        display: none;
+    }
+}
+
+@media (min-width:769px) and (max-width:1279px) {
+    .container-user-data{
+        width: 60%;
+    }
+}

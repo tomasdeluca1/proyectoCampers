@@ -1,0 +1,10 @@
+<% for (let review of reviews) { %> 
+    <div class="cuadradoReview">
+       <h5><%=  review.rate %></h5>
+        <div class="estrellasReview"> <%= review.estrellas %> </div>
+        <h6><%= review.destino %> </h6>
+        <h3><%= review.titulo %></h3>
+        <p><%= review.descripcion %> </p>
+        <h4 class="viajero"><%= review.nombre %></h4>
+    </div>
+    <% } %> 

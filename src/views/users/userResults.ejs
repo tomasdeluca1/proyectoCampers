@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <%- include('../partials/head') %> 
+        <link rel="stylesheet" href="../../../CSS/users/allUsers.css">
+        <link rel="stylesheet" href="../../../CSS/users/usersByName.css">
+        <title>Todos los usuarios</title>
+    </head>
+</head>
+<body>
+    <!--Header-->
+    <%- include('../partials/header') %> 
+
+    <section class="nav-vehiculos">
+        <article>
+            <h3><a href="home">Home</a> / <a href="all-users">Todos los usuarios</a></h3>
+        </article>
+    </section>
+
+    <!--CUERPO DEL CODIGO-->
+    <main class="body">
+        <div class="container-all-body">
+            <div class="datos-usuarios-div">
+                <h2 class="datos-usuarios-titulo">Datos usuarios</h2>
+                <div class="buscador-div">
+                    <form action="search" method="get">
+                        <input type="text" name="searchingUsers" id="" placeholder="Buscar usuario por su nombre, apellido o nombre de usuario" class="input-buscar">
+                        <button class="button-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+            <% if (usersResults == '') { %>
+                <div class="mensaje-de-error">
+                    <div class="icon-error-container">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                    <div class="container-recomendaciones">
+                        <div class="no-coincidencias-div">
+                            <h2 class="no-coincidencias">No hay usuarios que coincidan con tu busqueda</h2>
+                        </div>
+                        <ul class="recomendaciones">
+                            <li class="recomendacion">Revisa las faltas de ortografia</li>
+                            <li class="recomendacion">Probablemente no haya nadie que se llame asi</li>
+                            <li class="recomendacion">Busca por nombres mas comunes</li>
+                        </ul>
+                    </div>
+                </div>
+            <% } else { %> 
+                    <% for (let userResult of usersResults) { %>
+                        <div class="container-user-data">
+                            <div class="container-numero-usuario">
+                                <h2>Usuario numero: <%= userResult.id %></h2>
+                                <div class="linea-gris"></div>
+                            </div>
+                            <div class="container-dato">
+                                <p class="tipo-de-dato">Nombre de usuario</p>
+                                <p class="respuesta-tipo-de-dato"><%= userResult.userName %></p>
+                            </div>
+                            <div class="linea-gris"></div>
+                            <div class="container-dato">
+                                <p class="tipo-de-dato">Nombre</p>
+                                <p class="respuesta-tipo-de-dato"><%= userResult.firstName %></p>
+                            </div>
+                            <div class="linea-gris"></div>
+                            <div class="container-dato">
+                                <p class="tipo-de-dato">Apellido</p>
+                                <p class="respuesta-tipo-de-dato"><%= userResult.lastName %></p>
+                            </div>
+                            <div class="linea-gris"></div>
+                            <div class="container-dato">
+                                <p class="tipo-de-dato">Email</p>
+                                <p class="respuesta-tipo-de-dato"><%= userResult.email %></p>
+                            </div>
+                            <div class="linea-gris"></div>
+                            <div class="container-dato">
+                                <p class="tipo-de-dato">Numero de telefono</p>
+                                <% if (userResult && !userResult.phoneNumber) { %>
+                                    <p class="respuesta-tipo-de-dato">-</p>
+                                <% } else {%> 
+                                    <p class="respuesta-tipo-de-dato"><%= userResult.phoneNumber %></p>
+                                <% } %> 
+                            </div>
+                            <div class="linea-gris"></div>
+                            <div class="container-dato">
+                                <p class="tipo-de-dato">Tipo de usuario</p>
+                                <p class="respuesta-tipo-de-dato"><%= userResult.typeOfUser %></p>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>  
+     </main>
+
+    <!--FOOTER-->
+    <%- include('../partials/footer') %> 
+
+    <ul>
+        
+    </ul>
+</body>
+</html>

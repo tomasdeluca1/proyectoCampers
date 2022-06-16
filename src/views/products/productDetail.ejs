@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('../partials/head') %> 
+
+    <title>Nuestros vehículos</title>
+    <link rel="stylesheet" href="../../../css/main/home.css">
+    <link rel="stylesheet" href="../../../css/products/productDetail.css">
+    
+</head>
+<body>
+    <!-- Header -->
+
+    <%- include('../partials/header') %> 
+
+    <!-- Cuerpo -->
+
+    <section class="nav-vehiculos">
+      <article>
+          <h3><a href="home">Home</a> / <a href="products">Nuestros Vehículos</a></h3>
+      </article>
+  </section>
+  <div class="contenedor">
+    <img src="/images/imagenesVariadas/nuestrosVehiculos.png" alt="Banner principal" class="imagenCentrada">
+     <div class="textoCentrado">Nuestras CamperVans</div>
+  </div>
+  
+  <section class="descripcion">
+      <h2 class="descTitular">¡Reservá tu CamperVan y preparate para un viaje repleto de aventura!</h2>
+      <p class="descCopy">Argentina Campers reencuentra a las personas con sus almas viajeras y aventureras. Nuestras
+          CamperVans aseguran un viaje lleno de experiencias únicas en una travesía cien porciento en libertad.</p>
+  </section>
+
+<section class="productos">
+<%- include("./partials/productosDetalle") %> 
+</section>
+
+<% if (locals.admin) { %>
+    <section class="agregarProducto">
+        <article>
+            <a href="/products/create">
+                <span><i class="fa-solid fa-van-shuttle" style="margin-right: 10px;"></i>Agregar Camper Van</span>
+            </a>
+        </article>
+    </section>
+<% } %> 
+
+
+
+  <div class="cierre">
+      <h4>Realizá el viaje de tus sueños con una de nuestras Camper Vans. Vehículos accesibles, prácticos y únicos.</h4>
+      <p>Desde Argentina Campers nos gusta decir que lo importante de un viaje no es el destino, sino que lo es el camino. Nuestros vehículos ofrecen la posibilidad de viajar con muchos lujos en un sólo lugar. <br><br>Las Camper Vans cuentan con una cama armmable y desarmable en la parte trasera de la camioneta, una mesa con asientos para poder disfrutar de una rica comida, utensilios de cocina y elementos para cocinar, y muchas cosas más. <br><br>Animate a dar el salto hacia la aventura, te esperamos.</p>
+  </div>
+
+    <!-- Mensaje Posicion absoluta -->
+
+    <%- include('../partials/msjPosicionAbsoluta') %> 
+
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %> 
+</body>
+</html>

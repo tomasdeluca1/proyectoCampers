@@ -1,0 +1,36 @@
+[
+ {
+  "id": 1,
+  "marca": "Renault",
+  "modelo": "Kangoo",
+  "img": "kangoo.png",
+  "detalle": "Nuestra Camper Van con una capacidad de 2 personas adultas, para recorrer los más bellos paisajes de la Argentina de forma práctica, compacta y cómoda. Renaul Kangoo, creada para aventureros.",
+  "capacidad": "2"
+ },
+ {
+  "id": 2,
+  "producto": "Camper Van",
+  "marca": "Citröen",
+  "modelo": "Jumpy",
+  "img": "citroenjumpy.png",
+  "detalle": "Esta Camper Van tiene una capacidad de dos adultos y un menor, la cuál brinda extrema comodidad y seguridad para viajar por toda la Argentina en un vehículo ampliamente confortable para manejar y viajar.",
+  "capacidad": "3"
+ },
+ {
+  "id": 3,
+  "producto": "Camper Van",
+  "marca": "Toyota",
+  "modelo": "Hiace",
+  "img": "toyotahiace.png",
+  "detalle": "La Camper Hiace fue la última incorporación de nuestra empresa y es realmente espectacular. Cuenta con capacidad para que viajen 4 personas extremadamente cómodas, es lo más parecido a un hotel con ruedas que veras en mucho tiempo.",
+  "capacidad": "4"
+ },
+ {
+  "id": 4,
+  "marca": "sdfsd",
+  "modelo": "sdfsdf",
+  "img": "imgProducto-1654209130837.png",
+  "detalle": "sdfdsf",
+  "capacidad": "1"
+ }
+]
